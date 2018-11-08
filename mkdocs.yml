@@ -1,0 +1,5 @@
+site_name: JavaMini Documentation
+theme: readthedocs
+docs_dir: 'doc'
+nav:
+    - 'Home': 'index.md'
