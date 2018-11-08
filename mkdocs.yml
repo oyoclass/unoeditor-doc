@@ -1,4 +1,4 @@
-site_name: JavaMini Documentation
+site_name: Arduino Documentation
 theme: readthedocs
 docs_dir: 'doc'
 nav:
