@@ -3,3 +3,5 @@ theme: readthedocs
 docs_dir: 'doc'
 nav:
     - 'Home': 'index.md'
+    - 'Data Types': 'Data_Types/data_types.md'
+    - 'Builtin': 'Builtin/builtin.md'
