@@ -7,24 +7,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="None">
   
-  <link rel="shortcut icon" href="./img/favicon.ico">
+  <link rel="shortcut icon" href="img/favicon.ico">
   <title>Home - Arduino Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="./css/highlight.css">
+  <link rel="stylesheet" href="css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="css/doc.css" rel="stylesheet">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Home";
     var mkdocs_page_input_path = "index.md";
-    var mkdocs_page_url = "/";
+    var mkdocs_page_url = null;
   </script>
   
-  <script src="./js/jquery-2.1.1.min.js"></script>
-  <script src="./js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="./js/highlight.pack.js"></script> 
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
 
@@ -38,7 +40,7 @@
         <a href="." class="icon icon-home"> Arduino Documentation</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -52,40 +54,60 @@
     <a class="current" href=".">Home</a>
     <ul class="subnav">
             
+    <li class="toctree-l2"><a href="#uno-editor">UNO Editor</a></li>
+    
+
+    <li class="toctree-l2"><a href="#user-interface">User Interface</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#file">File</a></li>
+        
+            <li><a class="toctree-l3" href="#verify">Verify</a></li>
+        
+            <li><a class="toctree-l3" href="#upload-to-board">Upload to board</a></li>
+        
+            <li><a class="toctree-l3" href="#compiling-status">Compiling Status</a></li>
+        
+        </ul>
+    
+
     </ul>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <span class="caption-text">Builtin</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="Builtin/builtin/">Builtin</a>
-                </li>
-    </ul>
+    <a class="" href="Data_Types/data_types/">Data Types</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <span class="caption-text">Data Types</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="Data_Types/data_types/">Data types</a>
-                </li>
-    </ul>
+    <a class="" href="Builtin/builtin/">Core Functions</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <span class="caption-text">Core</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="core/number/">Number</a>
-                </li>
-    </ul>
+    <a class="" href="Math/math/">Math</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="Interrupts/interrupts/">Interrupts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="Comparison/comparison_operators/">Comparison</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="libraries/libraries.md">Libraries</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="libraries/3rd-party-libraries.md">Third Party Libraries</a>
 	    </li>
           
         </ul>
@@ -120,7 +142,32 @@
           <div role="main">
             <div class="section">
               
-                
+                <p>The Arduino is a microcontroller board that can be programmed to control electrical devices such as lights and motors. They're often used to make quadcopters, thermostats, 3D printers, and more.</p>
+<p>The Arduino language is based on C/C++, but also has a many of its own special functions and constants. The main structure of an Arduino program, called a sketch, includes a setup function and a continuous loop function. The setup runs once, and the loop runs continuously after that for as long as the Arduino is powered. </p>
+<p>It looks like this:</p>
+<pre><code class="c++">//The setup runs once when the Arduino is powered/turned on
+void setup() {
+    //Your setup code goes in here
+}
+//The loop runs continuously, starting after the setup is finished running.
+void loop() {
+    //The rest of your code goes in here
+}
+</code></pre>
+
+<p>The Arduino can be programmed using the Arduino IDE when using PCs, Macs, or Linux computers. When using a Chromebook, the Arduino can be programmed using the UNO editor on the OYOclass platform.</p>
+<h2 id="uno-editor">UNO Editor</h2>
+<p>The UNO editor is a development environment that can compile and upload your code to an Arduino UNO type board when used with the associated Chromebook app. The editor is only able to upload code to a board when used on a Chromebook. It can, however, be used to compile and verify code, as well as share code when using both Chromebook and non-Chromebook computers.</p>
+<p>Another benefit of the UNO editor, it's lightning fast! The libraries are pre-compiled, so only the code you type has to be compiled.</p>
+<h2 id="user-interface">User Interface</h2>
+<h3 id="file">File</h3>
+<p>The <strong>File</strong> button is where you will find the new file, open, save, rename, and download options. This is also where you can manage and delete your files, and view your saving histories (older versions).</p>
+<h3 id="verify">Verify</h3>
+<p>The <strong>Verify</strong> button checks your code for syntax errors and compiles it. Compilation is the process of translating one language to another. In this case, the Arduino code is translated into the machine code that the Arduino understands.</p>
+<h3 id="upload-to-board">Upload to board</h3>
+<p>The <strong>Upload to board</strong> button will compile your code, then upload, or flash, your code to the board. </p>
+<h3 id="compiling-status">Compiling Status</h3>
+<p>The <strong>compiling status</strong> is shown in the window in the lower left hand</p>
               
             </div>
           </div>
@@ -128,7 +175,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Builtin/builtin/" class="btn btn-neutral float-right" title="Builtin">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="Data_Types/data_types/" class="btn btn-neutral float-right" title="Data Types">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
     </div>
@@ -143,12 +190,12 @@
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+      
         </div>
       </div>
 
     </section>
-    
+
   </div>
 
   <div class="rst-versions" role="note" style="cursor: pointer">
@@ -156,16 +203,18 @@
       
       
       
-        <span style="margin-left: 15px"><a href="Builtin/builtin/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="Data_Types/data_types/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
-    <script src="./js/theme.js"></script>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
 
 </body>
 </html>
 
 <!--
-MkDocs version : 0.16.3
-Build Date UTC : 2018-12-03 16:47:01
+MkDocs version : 1.0.4
+Build Date UTC : 2018-12-03 17:19:18
 -->

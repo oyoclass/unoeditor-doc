@@ -1,42 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
     <url>
-     <loc>/</loc>
+     <loc>None</loc>
      <lastmod>2018-12-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
-        
     <url>
-     <loc>/Builtin/builtin/</loc>
+     <loc>None</loc>
      <lastmod>2018-12-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>/Data_Types/data_types/</loc>
+     <loc>None</loc>
      <lastmod>2018-12-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>/core/number/</loc>
+     <loc>None</loc>
      <lastmod>2018-12-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
+    <url>
+     <loc>None</loc>
+     <lastmod>2018-12-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>None</loc>
+     <lastmod>2018-12-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc></loc>
+     
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc></loc>
+     
+     <changefreq>daily</changefreq>
+    </url>
 </urlset>
