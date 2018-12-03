@@ -1,0 +1,164 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/Builtin/builtin/", 
+            "text": "Builtin Functions and Methods\n\n\npinMode()\n\n\nDescription\n\n\nSets up a pin to be either an input or output. This allows the Arduino to allocate current appropriately \n\n\nSyntax\n\n\npinMode(pin, mode)\n\n\n\n\npin: the number of the pin being used\n\n\nmode: INPUT or OUTPUT\n\n\n\n\nExample\n\n\ndigitalWrite()\n\n\nDescription\n\n\nSets a pin to be either HIGH, 5V, or LOW, 0V or ground. The pin should be set to be an output using pinMode().\n\n\nSyntax\n\n\ndigitalWrite(pin, value)\n\n\n\n\npin: the number of the pin being used\n\n\nvalue: HIGH or LOW (5V or GND)\n\n\n\n\nExample\n\n\ndigitalRead()\n\n\nDescription\n\n\nReads and returns the value of a pin; either HIGH or LOW. The value of a pin is determined by it's voltage with 0-3V being LOW and 3-5V being HIGH.\nSyntax\ndigitalRead(pin)\n\n\n\n\npin: the number of the pin being used \n\n\n\n\nExample\n\n\nanalogWrite()\n\n\nDescription\n\n\nUses PWM to set a pin to a voltage between 0V and 5V. PWM, pusle width modulation, turns the pin on and off quickly, simulating an in between value. The pin should be set to be an output using pinMode().\n\n\nSyntax\n\n\nanalogWrite(pin, value)\n\n\n\n\npin: the number of the pin being used\n\n\nvalue: 0-255 (0V-5V)\n\n\n\n\nExample\n\n\nanalogRead()\n\n\nDescription\n\n\nReads and returns the value of an analog pin on a range of 0-1023. The value of the pin changes with voltage with 0V being returned as 0 and 5V being returned as 1023. Analog pins are pins A0-A5\n\n\nSyntax\n\n\nanalogRead(pin)\n\n\n\n\npin: the number of the pin being used \n\n\n\n\nExample", 
+            "title": "Builtin"
+        }, 
+        {
+            "location": "/Builtin/builtin/#builtin-functions-and-methods", 
+            "text": "", 
+            "title": "Builtin Functions and Methods"
+        }, 
+        {
+            "location": "/Builtin/builtin/#pinmode", 
+            "text": "", 
+            "title": "pinMode()"
+        }, 
+        {
+            "location": "/Builtin/builtin/#description", 
+            "text": "Sets up a pin to be either an input or output. This allows the Arduino to allocate current appropriately", 
+            "title": "Description"
+        }, 
+        {
+            "location": "/Builtin/builtin/#syntax", 
+            "text": "pinMode(pin, mode)   pin: the number of the pin being used  mode: INPUT or OUTPUT", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/Builtin/builtin/#example", 
+            "text": "", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/Builtin/builtin/#digitalwrite", 
+            "text": "", 
+            "title": "digitalWrite()"
+        }, 
+        {
+            "location": "/Builtin/builtin/#description_1", 
+            "text": "Sets a pin to be either HIGH, 5V, or LOW, 0V or ground. The pin should be set to be an output using pinMode().", 
+            "title": "Description"
+        }, 
+        {
+            "location": "/Builtin/builtin/#syntax_1", 
+            "text": "digitalWrite(pin, value)   pin: the number of the pin being used  value: HIGH or LOW (5V or GND)", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/Builtin/builtin/#example_1", 
+            "text": "", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/Builtin/builtin/#digitalread", 
+            "text": "", 
+            "title": "digitalRead()"
+        }, 
+        {
+            "location": "/Builtin/builtin/#description_2", 
+            "text": "Reads and returns the value of a pin; either HIGH or LOW. The value of a pin is determined by it's voltage with 0-3V being LOW and 3-5V being HIGH.\nSyntax\ndigitalRead(pin)   pin: the number of the pin being used", 
+            "title": "Description"
+        }, 
+        {
+            "location": "/Builtin/builtin/#example_2", 
+            "text": "", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/Builtin/builtin/#analogwrite", 
+            "text": "", 
+            "title": "analogWrite()"
+        }, 
+        {
+            "location": "/Builtin/builtin/#description_3", 
+            "text": "Uses PWM to set a pin to a voltage between 0V and 5V. PWM, pusle width modulation, turns the pin on and off quickly, simulating an in between value. The pin should be set to be an output using pinMode().", 
+            "title": "Description"
+        }, 
+        {
+            "location": "/Builtin/builtin/#syntax_2", 
+            "text": "analogWrite(pin, value)   pin: the number of the pin being used  value: 0-255 (0V-5V)", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/Builtin/builtin/#example_3", 
+            "text": "", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/Builtin/builtin/#analogread", 
+            "text": "", 
+            "title": "analogRead()"
+        }, 
+        {
+            "location": "/Builtin/builtin/#description_4", 
+            "text": "Reads and returns the value of an analog pin on a range of 0-1023. The value of the pin changes with voltage with 0V being returned as 0 and 5V being returned as 1023. Analog pins are pins A0-A5", 
+            "title": "Description"
+        }, 
+        {
+            "location": "/Builtin/builtin/#syntax_3", 
+            "text": "analogRead(pin)   pin: the number of the pin being used", 
+            "title": "Syntax"
+        }, 
+        {
+            "location": "/Builtin/builtin/#example_4", 
+            "text": "", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/Data_Types/data_types/", 
+            "text": "Data Types\n\n\nint:\n\n\n*2 bytes\n*Range of -32,768 to 32,767\n\n\n\nlong\n\n\nfloat\n\n\nbool\n\n\nString\n\n\nchar\n\n\narray\n\n\nlong \u2013 4 bytes range of -2,147,483,648 to 2,147,483,647 \nfloat \u2013 4 bytes -3.4028235E+38 to 3.4028235E+38\nbool \u2013 1 byte true or false\nString - \u201cthis is a string\u201d\nchar - 'a'\narray \u2013 {1,2,3}", 
+            "title": "Data types"
+        }, 
+        {
+            "location": "/Data_Types/data_types/#data-types", 
+            "text": "", 
+            "title": "Data Types"
+        }, 
+        {
+            "location": "/Data_Types/data_types/#int", 
+            "text": "*2 bytes\n*Range of -32,768 to 32,767", 
+            "title": "int:"
+        }, 
+        {
+            "location": "/Data_Types/data_types/#long", 
+            "text": "", 
+            "title": "long"
+        }, 
+        {
+            "location": "/Data_Types/data_types/#float", 
+            "text": "", 
+            "title": "float"
+        }, 
+        {
+            "location": "/Data_Types/data_types/#bool", 
+            "text": "", 
+            "title": "bool"
+        }, 
+        {
+            "location": "/Data_Types/data_types/#string", 
+            "text": "", 
+            "title": "String"
+        }, 
+        {
+            "location": "/Data_Types/data_types/#char", 
+            "text": "", 
+            "title": "char"
+        }, 
+        {
+            "location": "/Data_Types/data_types/#array", 
+            "text": "long \u2013 4 bytes range of -2,147,483,648 to 2,147,483,647 \nfloat \u2013 4 bytes -3.4028235E+38 to 3.4028235E+38\nbool \u2013 1 byte true or false\nString - \u201cthis is a string\u201d\nchar - 'a'\narray \u2013 {1,2,3}", 
+            "title": "array"
+        }, 
+        {
+            "location": "/core/number/", 
+            "text": "todo", 
+            "title": "Number"
+        }
+    ]
+}
