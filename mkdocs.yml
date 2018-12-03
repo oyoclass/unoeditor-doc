@@ -1,15 +1,16 @@
 site_name: Arduino Documentation
 theme: readthedocs
-docs_dir: 'doc'
-#nav:
+docs_dir: 'doc'#nav:
 pages:
     - 'Home': 'index.md'
     - 'Data Types': 'Data_Types/data_types.md'
     - 'Core Functions': 'Builtin/builtin.md'
     - 'Math': 'Math/math.md'
+    - 'Time': 'time.md'
     - 'Interrupts': 'Interrupts/interrupts.md'
     - 'Comparison': 'Comparison/comparison_operators.md'
-    - 'Libraries': 'libraries/libraries.md'
-    - 'Third Party Libraries': 'libraries/3rd-party-libraries.md'
+    - 'Third Party Libraries':
+        - 'DHT': 'Libraries/dht.md'
+        - 'LCD': 'Libraries/liquid_crystal.md'
 extra_css:
     - css/doc.css
