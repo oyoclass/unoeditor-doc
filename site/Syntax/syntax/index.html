@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Syntax - Arduino Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../../css/doc.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Syntax";
+    var mkdocs_page_input_path = "Syntax\\syntax.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Arduino Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Syntax</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#syntax">Syntax</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#structure">Structure</a></li>
+        
+            <li><a class="toctree-l3" href="#comments">Comments</a></li>
+        
+            <li><a class="toctree-l3" href="#conditional-statements">Conditional Statements</a></li>
+        
+            <li><a class="toctree-l3" href="#if-statements">If Statements</a></li>
+        
+            <li><a class="toctree-l3" href="#while-loops">While Loops</a></li>
+        
+            <li><a class="toctree-l3" href="#for-loops">For Loops</a></li>
+        
+            <li><a class="toctree-l3" href="#switch-case">Switch Case</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Data_Types/data_types/">Data Types</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Builtin/builtin/">Core Functions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Math/math/">Math</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Time/time/">Time</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Interrupts/interrupts/">Interrupts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Random/random/">Random</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Serial/Serial_Monitor/">Serial Monitor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Libraries</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Libraries/servo/">Servo</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Third Party Libraries</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Libraries/dht/">DHT</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Libraries/liquid_crystal/">LCD</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Arduino Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Syntax</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="syntax">Syntax</h1>
+<p>Many programming languages share a similar set of coding tools and operations. However, they often differ in how these operations get written; their <strong>syntax</strong>. Look below to see some of the syntax of the Arduino language.</p>
+<hr />
+<h2 id="structure">Structure</h2>
+<p>Every Arduino sketch must have a setup and loop function. Beyond that, you will often include libraries, global variables, and user defined functions. Look below for an example of how this will typically look.</p>
+<pre><code class="c++">//Included Libraries
+#include &lt;Servo.h&gt;
+
+//Global variables
+int angle = 90;
+int var = 0;
+
+void setup() {
+  // put your setup code here, to run once:
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+}
+
+void myFunction() {
+  // my code
+}
+</code></pre>
+
+<hr />
+<h2 id="comments">Comments</h2>
+<p>Comments are used in your code to explain it for yourselves and for others to read. </p>
+<p><strong>Single line comments</strong> are written by starting a line with <strong>//</strong></p>
+<pre><code class="c++">//This is a single line comment
+</code></pre>
+
+<p><strong>Block comments</strong> are written by surrounding a comment with <em>/</em> **/ </p>
+<pre><code class="c++">/*This is a 
+block comment */
+</code></pre>
+
+<hr />
+<h2 id="conditional-statements">Conditional Statements</h2>
+<p><strong>Conditional statements</strong> are ways to evaluate if something is true or false. Is p equal to q? Is 5 &gt; 4? Conditional statements are often used in programming to determine what should happen in the code. Look below to see how various conditional statements are written.</p>
+<pre><code class="c++">== (equal to) 
+!= (not equal to) 
+&lt; (less than) 
+&lt;= (less than or equal to) 
+&gt; (greater than) 
+&gt;= (greater than or equal to) 
+</code></pre>
+
+<hr />
+<h2 id="if-statements">If Statements</h2>
+<p><strong>If statements</strong> are coding tools that run a block of code <em>if</em> a conditional statement is true. If a statement is not true, that code block will be skipped over. After an if statement you may have an <strong>else if</strong> or <strong>else</strong> statment. An else if statment is an if statment that gets evaluated only if the preceeding if or else if statement evaluates as false. An else statement runs if the preceeding if or else if statement evaluates as false. The code block that runs if one of these statements is true is contained within the curly brackets, <strong>{<em>//code block</em>}</strong>.</p>
+<pre><code class="c++">if (var == 5) {
+    //do something
+}
+else if (var &lt; 5) {
+    //do something else
+}
+else {
+    //do something different
+}
+</code></pre>
+
+<hr />
+<h2 id="while-loops">While Loops</h2>
+<p>A while loop repeats a code block as long as the conditional statement evaluates as true. You need to be careful to write code within the while loop that will eventually cause the while loop to evaluate as false. Otherwise, your code can get stuck in a never ending loop.</p>
+<pre><code class="c++">while (condition == true) {
+    //do things
+}
+</code></pre>
+
+<hr />
+<h2 id="for-loops">For Loops</h2>
+<p>For loops allow you to repeat a code block a certain number of times while incrementing a variable, called a <em>counter</em>, each time the for loop goes through a cycle. </p>
+<p>The three arguments are the initialization, condition, and increment, respectively. The initialization step initializes the counter variable. The condition specifies the condition under which the for loop keeps operating. Once the condition evaluates as false, the for loop stops running. The increment either increases or decreases, decrements, the counter. The shorthand way of doing this is counter++ or counter--.</p>
+<pre><code class="c++">for (int i = 0; i &lt; 10; i++) {
+    Serial.println(i);
+}
+</code></pre>
+
+<hr />
+<h2 id="switch-case">Switch Case</h2>
+<p>A switch case works, essentially, like several else if statements. An argument is fed in and is evaluated against several cases. If the argument is equal to any of the cases, the code contained within that case will run. If no cases are true, the optional default will run or, if there is no default defined, the switch case will be skipped over.</p>
+<pre><code class="c++">switch (var) {
+    case 1:
+      //do something when var equals 1
+      break;
+    case 2:
+      //do something when var equals 2
+      break;
+    default:
+      // if nothing else matches, do the default
+      // default is optional
+      break;
+}
+</code></pre>
+
+<hr />
+<h4 id="credit">Credit</h4>
+<p>https://www.arduino.cc/reference/en/</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../Data_Types/data_types/" class="btn btn-neutral float-right" title="Data Types">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../Data_Types/data_types/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

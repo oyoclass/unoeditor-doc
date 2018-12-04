@@ -33,7 +33,7 @@ Another benefit of the UNO editor, it's lightning fast! The libraries are pre-co
 
 ##User Interface
 
-![UNO Editor](UNO_Editor_Labeled.png)
+![UNO Editor](../../UNO_Editor_Labeled.png)
 
 ###File
 

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>LCD - Arduino Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../../css/doc.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "LCD";
+    var mkdocs_page_input_path = "Libraries\\liquid_crystal.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Arduino Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Syntax/syntax/">Syntax</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Data_Types/data_types/">Data Types</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Builtin/builtin/">Core Functions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Math/math/">Math</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Time/time/">Time</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Interrupts/interrupts/">Interrupts</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Random/random/">Random</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Serial/Serial_Monitor/">Serial Monitor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Libraries</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../servo/">Servo</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Third Party Libraries</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../dht/">DHT</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">LCD</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#liquid-crystal-i2c">Liquid Crystal I2C</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#object">Object</a></li>
+        
+            <li><a class="toctree-l4" href="#methods">Methods</a></li>
+        
+            <li><a class="toctree-l4" href="#examples">Examples</a></li>
+        
+            <li><a class="toctree-l4" href="#scanner-script">Scanner script</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Arduino Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Third Party Libraries &raquo;</li>
+        
+      
+    
+    <li>LCD</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="liquid-crystal-i2c">Liquid Crystal I2C</h1>
+<p>The LiquidCrystal_I2C library allows you to program an Arduino to print messages to an LCD screen using an I2C backpack. I2C is a communication protocol that allows you to communicate with multiple devices using only a few pins. </p>
+<p>To include the library into the sketch you're working on, include the two libraries shown below at the top of your sketch.</p>
+<pre><code class="c++">#include &lt;LCD.h&gt;
+#include &lt;LiquidCrystal_I2C.h&gt;
+</code></pre>
+
+<h2 id="object">Object</h2>
+<p>To create an LCD object, follow the line of code below. </p>
+<pre><code class="c++">LiquidCrystal_I2C lcd(0x3f, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);
+</code></pre>
+
+<p>The first argument is the address of your LCD screen. This can be found by using the scanner script at the bottom of this page.</p>
+<h2 id="methods">Methods</h2>
+<h3 id="lcdbeginxy">lcd.begin(x,y)</h3>
+<ul>
+<li><strong>x</strong>: the number of horizontal characters of the lcd screen</li>
+<li><strong>y</strong>: the number of vertical characters of the lcd screen</li>
+</ul>
+<p>Initialize the LCD screen with the height and width of the displays</p>
+<h3 id="lcdclear">lcd.clear()</h3>
+<p>Clear all characters from the LCD screen</p>
+<h3 id="lcdprintvar">lcd.print(var)</h3>
+<ul>
+<li><strong>var</strong>: any String or number data type</li>
+</ul>
+<p>Prints characters to the LCD screen starting at the current location of the cursor. This method does not skip to the next line when it reaches the end of the line.</p>
+<h3 id="lcdsetcursorxy">lcd.setCursor(x,y)</h3>
+<ul>
+<li><strong>x</strong>: the horizontal space number, starting at 0</li>
+<li><strong>y</strong>: the vertical space number, starting at 0</li>
+</ul>
+<h3 id="lcdhome">lcd.home()</h3>
+<p>Places the cursor at the (0,0) point (upper left-hand corner)</p>
+<h2 id="examples">Examples</h2>
+<pre><code class="c++">//Print &quot;Starting...&quot; on the second line of the LCD screen.
+#include &lt;LCD.h&gt;
+#include &lt;LiquidCrystal_I2C.h&gt;
+
+//Create liquid crystal object called 'lcd'
+LiquidCrystal_I2C lcd(0x3f, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);
+
+void setup() {
+  lcd.begin(16, 2); //Start and initialize the lcd display
+  lcd.clear(); //Clear any text from the screen
+  lcd.setCursor(0,1);
+  lcd.print(&quot;Starting...&quot;); //Print 'Starting...'
+  delay(1000); //Give a second to display the message.
+}
+
+void loop() {
+
+}
+</code></pre>
+
+<h2 id="scanner-script">Scanner script</h2>
+<pre><code class="c++">// --------------------------------------
+// i2c_scanner
+//
+// Version 1
+//    This program (or code that looks like it)
+//    can be found in many places.
+//    For example on the Arduino.cc forum.
+//    The original author is not know.
+// Version 2, Juni 2012, Using Arduino 1.0.1
+//     Adapted to be as simple as possible by Arduino.cc user Krodal
+// Version 3, Feb 26  2013
+//    V3 by louarnold
+// Version 4, March 3, 2013, Using Arduino 1.0.3
+//    by Arduino.cc user Krodal.
+//    Changes by louarnold removed.
+//    Scanning addresses changed from 0...127 to 1...119,
+//    according to the i2c scanner by Nick Gammon
+//    http://www.gammon.com.au/forum/?id=10896
+// Version 5, March 28, 2013
+//    As version 4, but address scans now to 127.
+//    A sensor seems to use address 120.
+// Version 6, November 27, 2015.
+//    Added waiting for the Leonardo serial communication.
+//
+//
+// This sketch tests the standard 7-bit addresses
+// Devices with higher bit address might not be seen properly.
+//
+
+#include &lt;Wire.h&gt;
+
+
+void setup()
+{
+  Wire.begin();
+
+  Serial.begin(9600);
+  while (!Serial);             // Leonardo: wait for serial monitor
+  Serial.println(&quot;\nI2C Scanner&quot;);
+}
+
+
+void loop()
+{
+  byte error, address;
+  int nDevices;
+
+  Serial.println(&quot;Scanning...&quot;);
+
+  nDevices = 0;
+  for(address = 1; address &lt; 127; address++ )
+  {
+    // The i2c_scanner uses the return value of
+    // the Write.endTransmisstion to see if
+    // a device did acknowledge to the address.
+    Wire.beginTransmission(address);
+    error = Wire.endTransmission();
+
+    if (error == 0)
+    {
+      Serial.print(&quot;I2C device found at address 0x&quot;);
+      if (address&lt;16)
+        Serial.print(&quot;0&quot;);
+      Serial.print(address,HEX);
+      Serial.println(&quot;  !&quot;);
+
+      nDevices++;
+    }
+    else if (error==4)
+    {
+      Serial.print(&quot;Unknown error at address 0x&quot;);
+      if (address&lt;16)
+        Serial.print(&quot;0&quot;);
+      Serial.println(address,HEX);
+    }    
+  }
+  if (nDevices == 0)
+    Serial.println(&quot;No I2C devices found\n&quot;);
+  else
+    Serial.println(&quot;done\n&quot;);
+
+  delay(5000);           // wait 5 seconds for next scan
+}
+</code></pre>
+
+<h4 id="credit">Credit</h4>
+<p><a href="https://bitbucket.org/fmalpartida/new-liquidcrystal/overview">Library by Francisco Malpartida</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../dht/" class="btn btn-neutral" title="DHT"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../dht/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
