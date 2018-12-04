@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Interrupts - Arduino Documentation</title>
+  <title>Random - Arduino Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Interrupts";
-    var mkdocs_page_input_path = "Interrupts\\interrupts.md";
+    var mkdocs_page_name = "Random";
+    var mkdocs_page_input_path = "Random\\random.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -79,26 +79,30 @@
     <a class="" href="../../Time/time/">Time</a>
 	    </li>
           
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Interrupts/interrupts/">Interrupts</a>
+	    </li>
+          
             <li class="toctree-l1 current">
 		
-    <a class="current" href="./">Interrupts</a>
+    <a class="current" href="./">Random</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#external-interrupts">External Interrupts</a></li>
+    <li class="toctree-l2"><a href="#random">Random</a></li>
     
         <ul>
         
-            <li><a class="toctree-l3" href="#attachinterrupt">attachInterrupt()</a></li>
+            <li><a class="toctree-l3" href="#random_1">random()</a></li>
+        
+            <li><a class="toctree-l3" href="#randomseed">randomSeed()</a></li>
+        
+            <li><a class="toctree-l3" href="#example-sketch">Example Sketch</a></li>
         
         </ul>
     
 
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Random/random/">Random</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -154,7 +158,7 @@
     
       
     
-    <li>Interrupts</li>
+    <li>Random</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -164,45 +168,49 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="external-interrupts">External Interrupts</h1>
-<p>An external interrupt - sometimes called a hardware interrupt - is a piece of hardware that, when triggered, runs an interrupt service routine, ISR. An interrupt service routine is simply a user defined function that gets attached to an interrupt. When the interrupt is triggered, it stops the code the Arduino is running and runs the ISR. Once the ISR is finished running, the Arduino returns to running the code where it left off.</p>
-<p>A simple example is a button connected to an interrupt that switches the direction of a motor any time it's pushed, regardless of where the Arduino is in the code.</p>
-<p>The Arduino has two interrupts, 0 and 1, connected to pins 2 and 3, respectively. The can ge triggered by four different modes:</p>
-<ul>
-<li><strong>Low</strong>: trigger the interrupt whenever the pin is low, 0V-3V.</li>
-<li><strong>Falling</strong>: trigger the interrupt whenever the pin goes from high to low.</li>
-<li><strong>Rising</strong>: trigger the interrupt whenever the pin goes from low to high.</li>
-<li><strong>Change</strong>: trigger the interrupt whenever the pin changes from low to high, or vice versa.</li>
-</ul>
-<h2 id="attachinterrupt">attachInterrupt()</h2>
+                <h1 id="random">Random</h1>
+<hr />
+<h2 id="random_1">random()</h2>
 <h3 id="description">Description</h3>
-<p>To set up an interrupt, you need to create an ISR, attach it to an interrupt pin, and choose the mode. You do this using the method <strong>attachInterrupt()</strong>.</p>
-<p><strong>attachInterrupt()</strong> is typically used within the <strong>setup()</strong>. <em>Note that you should use pinMode() to set up your interrupt pin as an input as well.</em></p>
+<p>Generates and returns a pseudo-random number.</p>
 <h3 id="syntax">Syntax</h3>
-<p><strong>attachInterrupt(digitalPinToInterrupt(pin), ISR, mode);</strong></p>
+<p>random(max)
+random(min, max)</p>
 <ul>
-<li><strong>pin</strong>: the number of the pin being used</li>
-<li><strong>ISR</strong>: the name of the interrupt service routine your create at the bottom of your code</li>
-<li><strong>mode</strong>: LOW, FALLING, RISING, or CHANGE</li>
-<li><strong>digitalPinToInterrupt()</strong>: a function that takes in a pin number and returns the respective interrupt number (different versions of the Arduino have different interrupt pins).</li>
+<li><strong>max</strong>: upper bound of the random value, exclusive</li>
+<li><strong>min</strong>: lower bound of the random value, inclusive</li>
 </ul>
-<h3 id="examples">Examples</h3>
-<pre><code class="c++">int led = 13;
-int button = 2;
-int on = LOW;
+<h3 id="example">Example</h3>
+<pre><code class="c++">randNum = random(10);     //Generate a random number from 0-9
+randNum2 = random(20,31); //Generate a random number from 20-31
+</code></pre>
+
+<hr />
+<h2 id="randomseed">randomSeed()</h2>
+<h3 id="description_1">Description</h3>
+<p>Initializes the random number generator with a 'seed' value. It is common to use the analogRead() value of an analog pin as the seed value.</p>
+<h3 id="syntax_1">Syntax</h3>
+<p>randomSeed(seed)</p>
+<ul>
+<li><strong>seed</strong>: the number used to initialize the random number generator</li>
+</ul>
+<h3 id="example_1">Example</h3>
+<pre><code class="c++">randomSeed(analogRead(A0));
+</code></pre>
+
+<h2 id="example-sketch">Example Sketch</h2>
+<pre><code class="c++">long randNum;
 
 void setup() {
-  pinMode(led, OUTPUT);
-  pinMode(button, INPUT);
-  attachInterrupt(digitalPinToInterrupt(button), ledChange, CHANGE);
+    randomSeed(analogRead(A0));
 }
 
 void loop() {
-  digitalWrite(ledPin, on);
-}
-
-void ledChange() { //ledChange is the name of the ISR
-  on = !on;        //Change the value of 'on' between LOW and HIGH
+    randNum = random(100, 600);
+    digitalWrite(13, HIGH,);
+    delay(randNum)
+    digitalWrite(13, LOW);
+    delay(randNum);
 }
 </code></pre>
               
@@ -212,10 +220,10 @@ void ledChange() { //ledChange is the name of the ISR
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../Random/random/" class="btn btn-neutral float-right" title="Random">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../Serial/Serial_Monitor/" class="btn btn-neutral float-right" title="Serial Monitor">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../Time/time/" class="btn btn-neutral" title="Time"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Interrupts/interrupts/" class="btn btn-neutral" title="Interrupts"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -241,10 +249,10 @@ void ledChange() { //ledChange is the name of the ISR
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../Time/time/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../Interrupts/interrupts/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../Random/random/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../Serial/Serial_Monitor/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

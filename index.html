@@ -54,25 +54,23 @@
     <a class="current" href=".">Home</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#uno-editor">UNO Editor</a></li>
-    
-
-    <li class="toctree-l2"><a href="#user-interface">User Interface</a></li>
+    <li class="toctree-l2"><a href="#arduino-uno">Arduino UNO</a></li>
     
         <ul>
         
-            <li><a class="toctree-l3" href="#file">File</a></li>
+            <li><a class="toctree-l3" href="#uno-editor">UNO Editor</a></li>
         
-            <li><a class="toctree-l3" href="#verify">Verify</a></li>
-        
-            <li><a class="toctree-l3" href="#upload-to-board">Upload to board</a></li>
-        
-            <li><a class="toctree-l3" href="#compiling-status">Compiling Status</a></li>
+            <li><a class="toctree-l3" href="#user-interface">User Interface</a></li>
         
         </ul>
     
 
     </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="Syntax/syntax/">Syntax</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -92,22 +90,48 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="Time/time/">Time</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="Interrupts/interrupts/">Interrupts</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="Comparison/comparison_operators/">Comparison</a>
+    <a class="" href="Random/random/">Random</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="libraries/libraries.md">Libraries</a>
+    <a class="" href="Serial/Serial_Monitor/">Serial Monitor</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="libraries/3rd-party-libraries.md">Third Party Libraries</a>
+    <span class="caption-text">Libraries</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="Libraries/servo/">Servo</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Third Party Libraries</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="Libraries/dht/">DHT</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Libraries/liquid_crystal/">LCD</a>
+                </li>
+    </ul>
 	    </li>
           
         </ul>
@@ -142,7 +166,11 @@
           <div role="main">
             <div class="section">
               
-                <p>The Arduino is a microcontroller board that can be programmed to control electrical devices such as lights and motors. They're often used to make quadcopters, thermostats, 3D printers, and more.</p>
+                <!--<div class="doc-header">Arduino UNO</div>-->
+
+<h1 id="arduino-uno">Arduino UNO</h1>
+<p><em>The <strong>UNO Editor Docs</strong> go over many of syntax and specifics of the Arduino language and the <strong>UNO Editor</strong>. For more information, visit the <a href="https://www.arduino.cc/reference/en/">Arduino Reference Page</a>.</em></p>
+<p>The Arduino is a microcontroller board that can be programmed to control electrical devices such as lights and motors. They're often used to make quadcopters, thermostats, 3D printers, and more.</p>
 <p>The Arduino language is based on C/C++, but also has a many of its own special functions and constants. The main structure of an Arduino program, called a sketch, includes a setup function and a continuous loop function. The setup runs once, and the loop runs continuously after that for as long as the Arduino is powered. </p>
 <p>It looks like this:</p>
 <pre><code class="c++">//The setup runs once when the Arduino is powered/turned on
@@ -156,18 +184,28 @@ void loop() {
 </code></pre>
 
 <p>The Arduino can be programmed using the Arduino IDE when using PCs, Macs, or Linux computers. When using a Chromebook, the Arduino can be programmed using the UNO editor on the OYOclass platform.</p>
+<hr />
 <h2 id="uno-editor">UNO Editor</h2>
-<p>The UNO editor is a development environment that can compile and upload your code to an Arduino UNO type board when used with the associated Chromebook app. The editor is only able to upload code to a board when used on a Chromebook. It can, however, be used to compile and verify code, as well as share code when using both Chromebook and non-Chromebook computers.</p>
+<p>The UNO editor is a development environment that can compile and upload your code to an Arduino UNO type board when used with the associated <a href="https://chrome.google.com/webstore/detail/oyoclass-uno-editor-conne/flhhnjcaeefbdocmdmedihfpponhbjoi.">Chromebook app</a> The editor is only able to upload code to a board when used on a Chromebook. It can, however, be used to compile and verify code, as well as share code when using both Chromebook and non-Chromebook computers.</p>
 <p>Another benefit of the UNO editor, it's lightning fast! The libraries are pre-compiled, so only the code you type has to be compiled.</p>
 <h2 id="user-interface">User Interface</h2>
+<p><img alt="UNO Editor" src="UNO_Editor_Labeled.png" /></p>
 <h3 id="file">File</h3>
 <p>The <strong>File</strong> button is where you will find the new file, open, save, rename, and download options. This is also where you can manage and delete your files, and view your saving histories (older versions).</p>
+<p><em>Note that when saving or renaming a file, you must keep the <strong>.ino</strong> file extension.</em></p>
 <h3 id="verify">Verify</h3>
 <p>The <strong>Verify</strong> button checks your code for syntax errors and compiles it. Compilation is the process of translating one language to another. In this case, the Arduino code is translated into the machine code that the Arduino understands.</p>
+<p>If your code has never been saved, the Verify button will prompt you to save for the first time. After your code has been saved once, the Verify button will save your work each time it's clicked.</p>
 <h3 id="upload-to-board">Upload to board</h3>
 <p>The <strong>Upload to board</strong> button will compile your code, then upload, or flash, your code to the board. </p>
 <h3 id="compiling-status">Compiling Status</h3>
-<p>The <strong>compiling status</strong> is shown in the window in the lower left hand</p>
+<p>The <strong>compiling status</strong> is shown in the window in the lower left hand corner of the editor. This window will inform you of the compiling status and let you know when your code has been uploaded to the board. If there are any syntax errors in your code, the error reports will appear here.</p>
+<h3 id="serial-monitor">Serial Monitor</h3>
+<p>The <strong>serial monitor</strong> is shown in the window in the lower right hand corner of the editor. It allows you to send and receive messages to and from your Arduino board. The serial monitor is set to <strong>auto scroll</strong> by default, but it can be turned off. The serial monitor can also be cleared by using the <strong>clear</strong> button.</p>
+<p>The serial monitor in the UNO editor <strong>MUST</strong> be used with a delay of 100ms or more in the loop() when repeatedly printing to the serial monitor. This may be accomplished by other processes being computed in the code, or by use of a delay() function. If there is no delay, the editor can enter a continuous loop, unable to process any other commands. This can crash your browser and force you to restart.</p>
+<hr />
+<h4 id="credit">Credit</h4>
+<p>https://www.arduino.cc/reference/en/</p>
               
             </div>
           </div>
@@ -175,7 +213,7 @@ void loop() {
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Data_Types/data_types/" class="btn btn-neutral float-right" title="Data Types">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="Syntax/syntax/" class="btn btn-neutral float-right" title="Syntax">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
     </div>
@@ -203,7 +241,7 @@ void loop() {
       
       
       
-        <span style="margin-left: 15px"><a href="Data_Types/data_types/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="Syntax/syntax/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
@@ -216,5 +254,5 @@ void loop() {
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2018-12-03 17:19:18
+Build Date UTC : 2018-12-04 23:24:40
 -->

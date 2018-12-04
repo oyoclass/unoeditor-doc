@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Interrupts - Arduino Documentation</title>
+  <title>Serial Monitor - Arduino Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Interrupts";
-    var mkdocs_page_input_path = "Interrupts\\interrupts.md";
+    var mkdocs_page_name = "Serial Monitor";
+    var mkdocs_page_input_path = "Serial\\Serial_Monitor.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -79,21 +79,9 @@
     <a class="" href="../../Time/time/">Time</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">Interrupts</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#external-interrupts">External Interrupts</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#attachinterrupt">attachInterrupt()</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../../Interrupts/interrupts/">Interrupts</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -101,9 +89,25 @@
     <a class="" href="../../Random/random/">Random</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../../Serial/Serial_Monitor/">Serial Monitor</a>
+    <a class="current" href="./">Serial Monitor</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#serial-monitor">Serial Monitor</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#object">Object</a></li>
+        
+            <li><a class="toctree-l3" href="#methods">Methods</a></li>
+        
+            <li><a class="toctree-l3" href="#examples">Examples</a></li>
+        
+        </ul>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -154,7 +158,7 @@
     
       
     
-    <li>Interrupts</li>
+    <li>Serial Monitor</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -164,47 +168,54 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="external-interrupts">External Interrupts</h1>
-<p>An external interrupt - sometimes called a hardware interrupt - is a piece of hardware that, when triggered, runs an interrupt service routine, ISR. An interrupt service routine is simply a user defined function that gets attached to an interrupt. When the interrupt is triggered, it stops the code the Arduino is running and runs the ISR. Once the ISR is finished running, the Arduino returns to running the code where it left off.</p>
-<p>A simple example is a button connected to an interrupt that switches the direction of a motor any time it's pushed, regardless of where the Arduino is in the code.</p>
-<p>The Arduino has two interrupts, 0 and 1, connected to pins 2 and 3, respectively. The can ge triggered by four different modes:</p>
+                <h1 id="serial-monitor">Serial Monitor</h1>
+<p>The serial monitor is a window that allows you communicate with your Arduino. It is located in the bottom right hand corner of the editor. You can receive information from your Arduino such as if a button was pressed or what value is being received on an analog pin. </p>
+<p><center><img alt="Serial Monitor" src="Serial_Monitor.PNG" /></center></p>
+<p>The serial monitor in the UNO editor MUST be used with a delay of 100ms or more in the loop() when repeatedly printing to the serial monitor. This may be accomplished by other processes being computed in the code, or by use of a delay() function. If there is no delay, the editor can enter a continuous loop, unable to process any other commands. This can crash your browser and force you to restart.</p>
+<h2 id="object">Object</h2>
+<p>The serial monitor is interacted with using the pre-defind <strong>Serial</strong> object. The object contains all the methods that can be used to print and read from the serial monitor. </p>
+<p>The Arduino can be hooked up to several different output devices including LCD screens and touch screens. Because you can print to each of these, a general 'print' function won't work because you wouldn't know what you're printing to. Instead, each of these devices can have an object with an associated 'print' method. For the serial monitor, it looks like this.</p>
+<pre><code class="c++">//Object.method(argument);
+Serial.print(&quot;Hello World&quot;);
+</code></pre>
+
+<h2 id="methods">Methods</h2>
+<h3 id="serialbeginbaud">Serial.begin(BAUD)</h3>
 <ul>
-<li><strong>Low</strong>: trigger the interrupt whenever the pin is low, 0V-3V.</li>
-<li><strong>Falling</strong>: trigger the interrupt whenever the pin goes from high to low.</li>
-<li><strong>Rising</strong>: trigger the interrupt whenever the pin goes from low to high.</li>
-<li><strong>Change</strong>: trigger the interrupt whenever the pin changes from low to high, or vice versa.</li>
+<li><strong>BAUD</strong> - the BAUD rate is the speed at which the Arduino and serial monitor communicate with eachother.</li>
 </ul>
-<h2 id="attachinterrupt">attachInterrupt()</h2>
-<h3 id="description">Description</h3>
-<p>To set up an interrupt, you need to create an ISR, attach it to an interrupt pin, and choose the mode. You do this using the method <strong>attachInterrupt()</strong>.</p>
-<p><strong>attachInterrupt()</strong> is typically used within the <strong>setup()</strong>. <em>Note that you should use pinMode() to set up your interrupt pin as an input as well.</em></p>
-<h3 id="syntax">Syntax</h3>
-<p><strong>attachInterrupt(digitalPinToInterrupt(pin), ISR, mode);</strong></p>
+<p>The begin() method has to be called before any other method. It is usually used within the setup.</p>
+<h3 id="serialprintvar">Serial.print(var)</h3>
 <ul>
-<li><strong>pin</strong>: the number of the pin being used</li>
-<li><strong>ISR</strong>: the name of the interrupt service routine your create at the bottom of your code</li>
-<li><strong>mode</strong>: LOW, FALLING, RISING, or CHANGE</li>
-<li><strong>digitalPinToInterrupt()</strong>: a function that takes in a pin number and returns the respective interrupt number (different versions of the Arduino have different interrupt pins).</li>
+<li><strong>var</strong> - any data type. Numbers, characters, strings, and variables can be entered into the print method.</li>
 </ul>
-<h3 id="examples">Examples</h3>
-<pre><code class="c++">int led = 13;
-int button = 2;
-int on = LOW;
+<p>The print method will print the argument entered. It does not skip a line after printing.</p>
+<h3 id="serialprintlnvar">Serial.println(var)</h3>
+<ul>
+<li><strong>var</strong> - any data type. Numbers, characters, strings, and variables can be entered into the print method.</li>
+</ul>
+<p>The println method will print the argument entered, and then skips to the next line.</p>
+<h2 id="examples">Examples</h2>
+<pre><code class="c++">int myInt = 5;
+String myString = &quot;This is a string!&quot;;
 
 void setup() {
-  pinMode(led, OUTPUT);
-  pinMode(button, INPUT);
-  attachInterrupt(digitalPinToInterrupt(button), ledChange, CHANGE);
+  Serial.begin(9600);
+  Serial.print(&quot;Hello&quot;);    //Print 'Hello' and don't skip a line
+  Serial.println(&quot; World&quot;); //Print 'World' with a space in front of it on the same line as 'Hello'. ln skips to the  next line
+  Serial.println(&quot;This is a new line&quot;); //This line is printed on the next line
+  Serial.println(myInt);    //Printing variables doesn't require quotes
+  Serial.println(myString); //Printing string variables also doesn't require quotes.
+  Serial.println(9001);     
 }
 
 void loop() {
-  digitalWrite(ledPin, on);
-}
-
-void ledChange() { //ledChange is the name of the ISR
-  on = !on;        //Change the value of 'on' between LOW and HIGH
 }
 </code></pre>
+
+<p><img alt="Serial Monitor Output" src="Serial_Monitor_Output.png" /></p>
+<h4 id="credits">Credits</h4>
+<p>For more information see the <a href="https://www.arduino.cc/reference/en/language/functions/communication/serial/">Arduino reference page for the serial monitor</a></p>
               
             </div>
           </div>
@@ -212,10 +223,10 @@ void ledChange() { //ledChange is the name of the ISR
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../Random/random/" class="btn btn-neutral float-right" title="Random">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../Libraries/servo/" class="btn btn-neutral float-right" title="Servo">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../Time/time/" class="btn btn-neutral" title="Time"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Random/random/" class="btn btn-neutral" title="Random"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -241,10 +252,10 @@ void ledChange() { //ledChange is the name of the ISR
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../Time/time/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../Random/random/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../Random/random/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../Libraries/servo/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

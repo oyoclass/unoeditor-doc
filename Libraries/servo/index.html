@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Comparison - Arduino Documentation</title>
+  <title>Servo - Arduino Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Comparison";
-    var mkdocs_page_input_path = "Comparison\\comparison_operators.md";
+    var mkdocs_page_name = "Servo";
+    var mkdocs_page_input_path = "Libraries\\servo.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -56,6 +56,11 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../../Syntax/syntax/">Syntax</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../../Data_Types/data_types/">Data Types</a>
 	    </li>
           
@@ -71,34 +76,62 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../../Time/time/">Time</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../../Interrupts/interrupts/">Interrupts</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">Comparison</a>
+    <a class="" href="../../Random/random/">Random</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Serial/Serial_Monitor/">Serial Monitor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Libraries</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Servo</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#comparison">Comparison</a></li>
+    <li class="toctree-l3"><a href="#servo">Servo</a></li>
     
         <ul>
         
-            <li><a class="toctree-l3" href="#also-comparison">Also Comparison</a></li>
+            <li><a class="toctree-l4" href="#object">Object</a></li>
+        
+            <li><a class="toctree-l4" href="#methods">Methods</a></li>
         
         </ul>
     
 
     </ul>
+                </li>
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../libraries/libraries.md">Libraries</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../libraries/3rd-party-libraries.md">Third Party Libraries</a>
+    <span class="caption-text">Third Party Libraries</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../dht/">DHT</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../liquid_crystal/">LCD</a>
+                </li>
+    </ul>
 	    </li>
           
         </ul>
@@ -122,8 +155,12 @@
     <li><a href="../..">Docs</a> &raquo;</li>
     
       
+        
+          <li>Libraries &raquo;</li>
+        
+      
     
-    <li>Comparison</li>
+    <li>Servo</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -133,21 +170,58 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="comparison">Comparison</h1>
-<h2 id="also-comparison">Also Comparison</h2>
-<h3 id="comparison-3">Comparison 3</h3>
-<h4 id="comparison-4">Comparison 4</h4>
-<h5 id="comparison-5">Comparison 5</h5>
-<h6 id="comparison-6">Comparison 6</h6>
-<p>p1</p>
-<p>p2</p>
-<p>p3</p>
-<pre><code class="c++">== (equal to) 
-!= (not equal to) 
-&lt; (less than) 
-&lt;= (less than or equal to) 
-&gt; (greater than) 
-&gt;= (greater than or equal to) 
+                <h1 id="servo">Servo</h1>
+<p>To include the library into the sketch you're working on, include the library shown below at the top of your sketch.</p>
+<pre><code class="c++">#include &lt;Servo.h
+</code></pre>
+
+<h2 id="object">Object</h2>
+<p>To create a Servo object, follow the line of code below. </p>
+<pre><code class="c++">Servo myservo;
+</code></pre>
+
+<h2 id="methods">Methods</h2>
+<h3 id="myservoattachpin">myservo.attach(pin);</h3>
+<ul>
+<li><strong>pin</strong>: the pin the signal pin of the servo is connected to</li>
+</ul>
+<p>The attach() method sets up the servo object and connects it to a digital pin. The digital pin <strong>MUST</strong> be one of the PWM enabled pins.</p>
+<h3 id="myservowritepos">myservo.write(pos)</h3>
+<ul>
+<li><strong>pos</strong>: the angle in degrees, from 0 to 180</li>
+</ul>
+<p>The write() method turns the servo motor to a specific angle, between 0 and 180 degrees.</p>
+<pre><code class="c++">/* Sweep
+ by BARRAGAN &lt;http://barraganstudio.com&gt;
+ This example code is in the public domain.
+
+ modified 8 Nov 2013
+ by Scott Fitzgerald
+ http://www.arduino.cc/en/Tutorial/Sweep
+*/
+
+#include &lt;Servo.h&gt;
+
+Servo myservo;  // create servo object to control a servo
+// twelve servo objects can be created on most boards
+
+int pos = 0;    // variable to store the servo position
+
+void setup() {
+  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+}
+
+void loop() {
+  for (pos = 0; pos &lt;= 180; pos += 1) { // goes from 0 degrees to 180 degrees
+    // in steps of 1 degree
+    myservo.write(pos);              // tell servo to go to position in variable 'pos'
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
+  for (pos = 180; pos &gt;= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
+    myservo.write(pos);              // tell servo to go to position in variable 'pos'
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
+}
 </code></pre>
               
             </div>
@@ -156,8 +230,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../dht/" class="btn btn-neutral float-right" title="DHT">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../../Interrupts/interrupts/" class="btn btn-neutral" title="Interrupts"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../../Serial/Serial_Monitor/" class="btn btn-neutral" title="Serial Monitor"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -183,8 +259,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../Interrupts/interrupts/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../Serial/Serial_Monitor/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../dht/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
