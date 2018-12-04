@@ -3,7 +3,7 @@
 To include the library into the sketch you're working on, include the library shown below at the top of your sketch.
 
 ```c++
-#include <Servo.h
+#include <Servo.h>
 ```
 
 ##Object
