@@ -55,6 +55,7 @@ x = 9 % 5;  //x = 4
 ```
 
 ---
+
 #Math Functions
 
 ##max()

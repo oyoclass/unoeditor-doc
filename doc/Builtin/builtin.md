@@ -1,4 +1,4 @@
-#Builtin Functions
+#Core Functions
 
 The Arduino language is based on C/C++, but it also comes with many of its own builtin functions. Below are some of the core builtin functions.
 

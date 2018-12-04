@@ -1,7 +1,0 @@
-##delay()
-
-##delayMicroseconds
-
-##millis()
-
-##micros
