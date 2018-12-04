@@ -2,7 +2,7 @@
 
 The serial monitor is a window that allows you communicate with your Arduino. It is located in the bottom right hand corner of the editor. You can receive information from your Arduino such as if a button was pressed or what value is being received on an analog pin. 
 
-<center>![Serial Monitor](Serial_Monitor.PNG)</center>
+<center>![Serial Monitor](/assets/Serial_Monitor.PNG)</center>
 
 The serial monitor in the UNO editor MUST be used with a delay of 100ms or more in the loop() when repeatedly printing to the serial monitor. This may be accomplished by other processes being computed in the code, or by use of a delay() function. If there is no delay, the editor can enter a continuous loop, unable to process any other commands. This can crash your browser and force you to restart.
 
@@ -57,7 +57,7 @@ void loop() {
 }
 ```
 
-![Serial Monitor Output](Serial_Monitor_Output.png)
+![Serial Monitor Output](/assets/Serial_Monitor_Output.png)
 
 ####Credits
 
