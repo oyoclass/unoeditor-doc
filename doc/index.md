@@ -2,11 +2,11 @@
 
 #Arduino UNO
 
-*The **UNO Editor Docs** go over many of syntax and specifics of the Arduino language and the **UNO Editor**. For more information, visit the [Arduino Reference Page](https://www.arduino.cc/reference/en/).*
+*The **UNO Editor Docs** go over many of the syntax and specifics of the Arduino language and the **UNO Editor**. For more information, visit the [Arduino Reference Page](https://www.arduino.cc/reference/en/).*
 
 The Arduino is a microcontroller board that can be programmed to control electrical devices such as lights and motors. They're often used to make quadcopters, thermostats, 3D printers, and more.
 
-The Arduino language is based on C/C++, but also has a many of its own special functions and constants. The main structure of an Arduino program, called a sketch, includes a setup function and a continuous loop function. The setup runs once, and the loop runs continuously after that for as long as the Arduino is powered. 
+The Arduino language is based on C/C++, but also has many of its own special functions and constants. The main structure of an Arduino program, called a sketch, includes a setup function and a continuous loop function. The setup runs once, and the loop runs continuously after that for as long as the Arduino is powered. 
 
 It looks like this:
 
@@ -27,7 +27,7 @@ The Arduino can be programmed using the Arduino IDE when using PCs, Macs, or Lin
 
 ##UNO Editor
  
-The UNO editor is a development environment that can compile and upload your code to an Arduino UNO type board when used with the associated [Chromebook app](https://chrome.google.com/webstore/detail/oyoclass-uno-editor-conne/flhhnjcaeefbdocmdmedihfpponhbjoi.) The editor is only able to upload code to a board when used on a Chromebook. It can, however, be used to compile and verify code, as well as share code when using both Chromebook and non-Chromebook computers.
+The UNO editor is a development environment that can compile and upload your code to an Arduino UNO type board when used with the associated [Chromebook app](https://chrome.google.com/webstore/detail/oyoclass-uno-editor-conne/flhhnjcaeefbdocmdmedihfpponhbjoi). The editor is only able to upload code to a board when used on a Chromebook. It can, however, be used to compile and verify code, as well as share code when using both Chromebook and non-Chromebook computers.
 
 Another benefit of the UNO editor, it's lightning fast! The libraries are pre-compiled, so only the code you type has to be compiled.
 

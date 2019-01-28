@@ -67,7 +67,7 @@ block comment */
 
 ##If Statements
 
-**If statements** are coding tools that run a block of code *if* a conditional statement is true. If a statement is not true, that code block will be skipped over. After an if statement you may have an **else if** or **else** statment. An else if statment is an if statment that gets evaluated only if the preceeding if or else if statement evaluates as false. An else statement runs if the preceeding if or else if statement evaluates as false. The code block that runs if one of these statements is true is contained within the curly brackets, **{*//code block*}**.
+**If statements** are coding tools that run a block of code *if* a conditional statement is true. If a statement is not true, that code block will be skipped over. After an if statement you may have an **else if** or **else** statment. An else if statment is an if statment that gets evaluated only if the preceeding if or else if statement evaluates as false. An else statement runs if the preceeding if or else if statement evaluates as false. The code block that runs if one of these statements is true is contained within the curly brackets, like this: **{*//code block*}**.
 
 ```c++
 if (var == 5) {
