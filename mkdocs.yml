@@ -17,5 +17,6 @@ pages:
     - 'Third Party Libraries':
         - 'DHT': 'Libraries/dht.md'
         - 'LCD': 'Libraries/liquid_crystal.md'
+        - 'Keypad': 'Libraries/keypad.md'
 extra_css:
     - css/doc.css
