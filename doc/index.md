@@ -27,13 +27,13 @@ The Arduino can be programmed using the Arduino IDE when using PCs, Macs, or Lin
 
 ##UNO Editor
  
-The UNO editor is a development environment that can compile and upload your code to an Arduino UNO type board when used with the associated [Chromebook app](https://chrome.google.com/webstore/detail/oyoclass-uno-editor-conne/flhhnjcaeefbdocmdmedihfpponhbjoi). The editor is only able to upload code to a board when used on a Chromebook. It can, however, be used to compile and verify code, as well as share code when using both Chromebook and non-Chromebook computers.
+The UNO editor is a development environment that can compile and upload your code to an Arduino UNO. The editor works on Chromebooks, PCs, Macs, and Linux computers, allowing you to use devices you might not always be able to use with the standard Arduino IDE.
 
 Another benefit of the UNO editor, it's lightning fast! The libraries are pre-compiled, so only the code you type has to be compiled.
 
 ##User Interface
 
-![UNO Editor](UNO_Editor_Labeled.PNG)
+![UNO Editor](UNO_Editor_Labeled.png)
 
 ###File
 
@@ -49,7 +49,9 @@ If your code has never been saved, the Verify button will prompt you to save for
 
 ###Upload to board
 
-The **Upload to board** button will compile your code, then upload, or flash, your code to the board. 
+The **Upload to board** button will compile your code, then upload, or flash, your code to the board. When you access the UNO Editor from the Apps dropdown, clicking this button will prompt you to open the app in a new tab. This is necessary to allow you to upload code from the Editor to your board. 
+
+![UNO Editor New Tab Prompt](UNO_Editor_new_tab_prompt.png)
 
 ###Compiling Status
 
