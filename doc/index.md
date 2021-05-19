@@ -59,7 +59,17 @@ The **Upload to board** button will compile your code, then upload, or flash, yo
 
 ![UNO Editor New Tab Prompt](UNO_Editor_new_tab_prompt.png)
 
-For more details on "upload steps", you can check <a href="https://develop.oyoclass.com/story/60a41b25792ac2225c0d24da" target="_blank">on this page here &raquo;</a>
+Once the page is opened in a new tab, you can click the "Upload to Board" button again to initiate the flash code process. The browser will pop-up a window to ask you to select the UNO board to connect like below:
+
+![Select Board Prompt](UNO_Editor_boarh_connect.png)
+
+In the modal window you will see a list of UNO boards currently connected to your computer. If you only plug one board in, then you should only see one item listed. This depends on different operating systems, and you may see different names for your board:
+
+* In Windows, the name may be shown as "Arduino UNO"
+* In MacBook / MacOS, the name may be shown as "IOUSBHost Device (cb.usbmodem141101)", or something similar.
+* In Chromebook and Linux, the name may be shown as "0043 (ttyACM0)"
+
+Select your board then click "Connect". Once connected, your code will be flashed to the board. For more details on "upload steps", you can check <a href="https://develop.oyoclass.com/story/60a41b25792ac2225c0d24da" target="_blank">on this page here &raquo;</a>
 <br/>
 <br/>
 
