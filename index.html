@@ -190,10 +190,10 @@ void loop() {
 <p>The Arduino can be programmed using the Arduino IDE when using PCs, Macs, or Linux computers. When using a Chromebook, the Arduino can be programmed using the UNO editor on the OYOclass platform.</p>
 <hr />
 <h2 id="uno-editor">UNO Editor</h2>
-<p>The UNO editor is a development environment that can compile and upload your code to an Arduino UNO type board when used with the associated <a href="https://chrome.google.com/webstore/detail/oyoclass-uno-editor-conne/flhhnjcaeefbdocmdmedihfpponhbjoi">Chromebook app</a>. The editor is only able to upload code to a board when used on a Chromebook. It can, however, be used to compile and verify code, as well as share code when using both Chromebook and non-Chromebook computers.</p>
+<p>The UNO editor is a development environment that can compile and upload your code to an Arduino UNO. The editor works on Chromebooks, PCs, Macs, and Linux computers, allowing you to use devices you might not always be able to use with the standard Arduino IDE.</p>
 <p>Another benefit of the UNO editor, it's lightning fast! The libraries are pre-compiled, so only the code you type has to be compiled.</p>
 <h2 id="user-interface">User Interface</h2>
-<p><img alt="UNO Editor" src="UNO_Editor_Labeled.PNG" /></p>
+<p><img alt="UNO Editor" src="UNO_Editor_Labeled.png" /></p>
 <h3 id="file">File</h3>
 <p>The <strong>File</strong> button is where you will find the new file, open, save, rename, and download options. This is also where you can manage and delete your files, and view your saving histories (older versions).</p>
 <p><em>Note that when saving or renaming a file, you must keep the <strong>.ino</strong> file extension.</em></p>
@@ -201,7 +201,8 @@ void loop() {
 <p>The <strong>Verify</strong> button checks your code for syntax errors and compiles it. Compilation is the process of translating one language to another. In this case, the Arduino code is translated into the machine code that the Arduino understands.</p>
 <p>If your code has never been saved, the Verify button will prompt you to save for the first time. After your code has been saved once, the Verify button will save your work each time it's clicked.</p>
 <h3 id="upload-to-board">Upload to board</h3>
-<p>The <strong>Upload to board</strong> button will compile your code, then upload, or flash, your code to the board. </p>
+<p>The <strong>Upload to board</strong> button will compile your code, then upload, or flash, your code to the board. When you access the UNO Editor from the Apps dropdown, clicking this button will prompt you to open the app in a new tab. This is necessary to allow you to upload code from the Editor to your board. </p>
+<p><img alt="UNO Editor New Tab Prompt" src="UNO_Editor_new_tab_prompt.png" /></p>
 <h3 id="compiling-status">Compiling Status</h3>
 <p>The <strong>compiling status</strong> is shown in the window in the lower left hand corner of the editor. This window will inform you of the compiling status and let you know when your code has been uploaded to the board. If there are any syntax errors in your code, the error reports will appear here.</p>
 <h3 id="serial-monitor">Serial Monitor</h3>
@@ -258,5 +259,5 @@ void loop() {
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2021-05-18 18:27:36
+Build Date UTC : 2021-05-19 21:01:05
 -->
