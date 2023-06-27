@@ -1,8 +1,7 @@
 site_name: Arduino Documentation
 theme: readthedocs
 docs_dir: 'doc'
-#nav:
-pages:
+nav:
     - 'Home': 'index.md'
     - 'Syntax': 'Syntax/syntax.md'
     - 'Data Types': 'Data_Types/data_types.md'
