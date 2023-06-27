@@ -1,250 +1,165 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Math - Arduino Documentation</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  <link href="../../css/doc.css" rel="stylesheet">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Math";
-    var mkdocs_page_input_path = "Math/math.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Math - Arduino Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../css/doc.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Math";
+        var mkdocs_page_input_path = "Math/math.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
-
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> Arduino Documentation</a>
-        <div role="search">
+          <a href="../.." class="icon icon-home"> Arduino Documentation
+        </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Syntax/syntax/">Syntax</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Data_Types/data_types/">Data Types</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Builtin/builtin/">Core Functions</a>
-	    </li>
-          
-            <li class="toctree-l1 current">
-		
-    <a class="current" href="./">Math</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#math">Math</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#addition">Addition</a></li>
-        
-            <li><a class="toctree-l3" href="#subtraction">Subtraction</a></li>
-        
-            <li><a class="toctree-l3" href="#multiplication">Multiplication</a></li>
-        
-            <li><a class="toctree-l3" href="#division">Division</a></li>
-        
-            <li><a class="toctree-l3" href="#mod">Mod</a></li>
-        
-        </ul>
-    
-
-    <li class="toctree-l2"><a href="#math-functions">Math Functions</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#max">max()</a></li>
-        
-            <li><a class="toctree-l3" href="#min">min()</a></li>
-        
-            <li><a class="toctree-l3" href="#map">map()</a></li>
-        
-            <li><a class="toctree-l3" href="#abs">abs()</a></li>
-        
-            <li><a class="toctree-l3" href="#constrain">constrain()</a></li>
-        
-        </ul>
-    
-
-    <li class="toctree-l2"><a href="#trigonometric-functions">Trigonometric Functions</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#cos">cos()</a></li>
-        
-            <li><a class="toctree-l3" href="#sin">sin()</a></li>
-        
-            <li><a class="toctree-l3" href="#tan">tan()</a></li>
-        
-        </ul>
-    
-
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Syntax/syntax/">Syntax</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Data_Types/data_types/">Data Types</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Builtin/builtin/">Core Functions</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Math</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#addition">Addition</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#subtraction">Subtraction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#multiplication">Multiplication</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#division">Division</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mod">Mod</a>
+    </li>
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Time/time/">Time</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Interrupts/interrupts/">Interrupts</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Random/random/">Random</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Serial/Serial_Monitor/">Serial Monitor</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Libraries</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../Libraries/servo/">Servo</a>
                 </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Third Party Libraries</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../Libraries/dht/">DHT</a>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Time/time/">Time</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="../../Libraries/liquid_crystal/">LCD</a>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Interrupts/interrupts/">Interrupts</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="../../Libraries/keypad/">Keypad</a>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Random/random/">Random</a>
                 </li>
-    </ul>
-	    </li>
-          
-        </ul>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Serial/Serial_Monitor/">Serial Monitor</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Libraries</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Libraries/servo/">Servo</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Third Party Libraries</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Libraries/dht/">DHT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Libraries/liquid_crystal/">LCD</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Libraries/keypad/">Keypad</a>
+                  </li>
+              </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">Arduino Documentation</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Arduino Documentation</a>
+        
       </nav>
-
-      
       <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../..">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>Math</li>
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li>Math</li>
     <li class="wy-breadcrumbs-aside">
-      
     </li>
   </ul>
   <hr/>
 </div>
-          <div role="main">
-            <div class="section">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
               
                 <h1 id="math">Math</h1>
 <p>Mathematical operations can be performed within your code. In addition to basic operations, there are a few shorthand ways to do simple math. Look below to see some examples.</p>
 <h2 id="addition">Addition</h2>
 <p>Denoted by the <strong>+</strong> sign.</p>
-<pre><code class="c++">x = 5 + 6; //x = 11
+<pre><code class="language-c++">x = 5 + 6; //x = 11
 x = x + 1; //Increment x by 1; Add 1 to x and overwrite the old value of x with the new one
 x++;       //Increment x by 1; shorthand version of the line above
 x += 3;    //Add 3 to x; compound addition
 </code></pre>
-
 <h2 id="subtraction">Subtraction</h2>
 <p>Denoted by the <strong>-</strong> sign.</p>
-<pre><code class="c++">x = 7 - 2; //x = 5 
+<pre><code class="language-c++">x = 7 - 2; //x = 5 
 x = x - 1; //Decrement x by 1; Add 1 to x and overwrite the old value of x with the new one
 x--;       //Decrement x by 1; shorthand version of the line above
 x -= 3;    //Subtract 3 from x; compound subtraction
 </code></pre>
-
 <h2 id="multiplication">Multiplication</h2>
 <p>Denoted by the <strong>*</strong>.</p>
-<pre><code class="c++">x = 3 * 2; //x = 6
+<pre><code class="language-c++">x = 3 * 2; //x = 6
 x = x * 3; //Multiply x by 3 and overwrite the old value of x with the new one
 x *= 5;    //Multiply x by 5; compound multiplication
 </code></pre>
-
 <h2 id="division">Division</h2>
 <p>Denoted by the <strong>/</strong>.</p>
-<pre><code class="c++">x = 8 / 2; //x = 4 
+<pre><code class="language-c++">x = 8 / 2; //x = 4 
 x = x / 3; //Divide x by 3 and overwrite the old value of x with the new one
 x /= 5;    //Divide x by 5; compound division
 </code></pre>
-
 <h2 id="mod">Mod</h2>
 <p>The modulus - mod for short - is the remainder found when doing division. It is denoted using the <strong>%</strong> sign. </p>
-<pre><code class="c++">x = 7 % 5;  //x = 2 
+<pre><code class="language-c++">x = 7 % 5;  //x = 2 
 x = 10 % 5; //x = 0
 x = 9 % 5;  //x = 4
 </code></pre>
-
 <hr />
 <h1 id="math-functions">Math Functions</h1>
 <h2 id="max">max()</h2>
@@ -257,9 +172,8 @@ x = 9 % 5;  //x = 4
 <li><strong>y</strong>: second value</li>
 </ul>
 <h3 id="example">Example</h3>
-<pre><code class="c++">x = max(5, 3); //x = 5
+<pre><code class="language-c++">x = max(5, 3); //x = 5
 </code></pre>
-
 <hr />
 <h2 id="min">min()</h2>
 <h3 id="description_1">Description</h3>
@@ -271,9 +185,8 @@ x = 9 % 5;  //x = 4
 <li><strong>y</strong>: second value</li>
 </ul>
 <h3 id="example_1">Example</h3>
-<pre><code class="c++">x = min(6, 4); //x = 4
+<pre><code class="language-c++">x = min(6, 4); //x = 4
 </code></pre>
-
 <hr />
 <h2 id="map">map()</h2>
 <h3 id="description_2">Description</h3>
@@ -288,10 +201,9 @@ x = 9 % 5;  //x = 4
 <li><strong>highOutput</strong>: upper bound of the output scale</li>
 </ul>
 <h3 id="example_2">Example</h3>
-<pre><code class="c++">value = map(value, 0, 10, 0, 100); //Convert 'value' from a scale of 0-10 to a 
+<pre><code class="language-c++">value = map(value, 0, 10, 0, 100); //Convert 'value' from a scale of 0-10 to a 
 //scale of 0-100 and overwrite the old value of 'value' with the new one
 </code></pre>
-
 <hr />
 <h2 id="abs">abs()</h2>
 <h3 id="description_3">Description</h3>
@@ -302,9 +214,8 @@ x = 9 % 5;  //x = 4
 <li><strong>y</strong>: input value</li>
 </ul>
 <h3 id="example_3">Example</h3>
-<pre><code class="c++">x = abs(-5); //take the absolute value of -5 and save it into x; x = 5
+<pre><code class="language-c++">x = abs(-5); //take the absolute value of -5 and save it into x; x = 5
 </code></pre>
-
 <hr />
 <h2 id="constrain">constrain()</h2>
 <h3 id="description_4">Description</h3>
@@ -317,10 +228,9 @@ x = 9 % 5;  //x = 4
 <li><strong>high</strong>: the upper bound</li>
 </ul>
 <h3 id="examples">Examples</h3>
-<pre><code class="c++">x = constrain(14, 0, 10); //x = 10; 
+<pre><code class="language-c++">x = constrain(14, 0, 10); //x = 10; 
 y = constraint(54, 20, 100); //y = 54; the 54 is within the constrained range
 </code></pre>
-
 <hr />
 <h1 id="trigonometric-functions">Trigonometric Functions</h1>
 <h2 id="cos">cos()</h2>
@@ -332,9 +242,8 @@ y = constraint(54, 20, 100); //y = 54; the 54 is within the constrained range
 <li><strong>rad</strong> is the angle in radians. It accepts floating point numbers</li>
 </ul>
 <h3 id="examples_1">Examples</h3>
-<pre><code class="c++">x = cos(0.523599); //x = 0.866
+<pre><code class="language-c++">x = cos(0.523599); //x = 0.866
 </code></pre>
-
 <hr />
 <h2 id="sin">sin()</h2>
 <h3 id="description_6">Description</h3>
@@ -345,9 +254,8 @@ y = constraint(54, 20, 100); //y = 54; the 54 is within the constrained range
 <li><strong>rad</strong> is the angle in radians. It accepts floating point numbers</li>
 </ul>
 <h3 id="examples_2">Examples</h3>
-<pre><code class="c++">x = sin(0.523599); //x = 0.5
+<pre><code class="language-c++">x = sin(0.523599); //x = 0.5
 </code></pre>
-
 <hr />
 <h2 id="tan">tan()</h2>
 <h3 id="description_7">Description</h3>
@@ -358,33 +266,25 @@ y = constraint(54, 20, 100); //y = 54; the 54 is within the constrained range
 <li><strong>rad</strong> is the angle in radians. It accepts floating point numbers</li>
 </ul>
 <h3 id="examples_3">Examples</h3>
-<pre><code class="c++">x = tan(0.523599); //x = 0.57735027
+<pre><code class="language-c++">x = tan(0.523599); //x = 0.57735027
 </code></pre>
               
             </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../Builtin/builtin/" class="btn btn-neutral float-left" title="Core Functions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../../Time/time/" class="btn btn-neutral float-right" title="Time">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../../Builtin/builtin/" class="btn btn-neutral" title="Core Functions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-    
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-      
+          
         </div>
       </div>
 
@@ -392,20 +292,26 @@ y = constraint(54, 20, 100); //y = 54; the 54 is within the constrained range
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="../../Builtin/builtin/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../../Time/time/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../Builtin/builtin/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../Time/time/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
     <script src="../../js/theme.js" defer></script>
       <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>

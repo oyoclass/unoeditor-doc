@@ -1,178 +1,160 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Time - Arduino Documentation</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  <link href="../../css/doc.css" rel="stylesheet">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Time";
-    var mkdocs_page_input_path = "Time/time.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Time - Arduino Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../css/doc.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Time";
+        var mkdocs_page_input_path = "Time/time.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
-
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> Arduino Documentation</a>
-        <div role="search">
+          <a href="../.." class="icon icon-home"> Arduino Documentation
+        </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Syntax/syntax/">Syntax</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Data_Types/data_types/">Data Types</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Builtin/builtin/">Core Functions</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Math/math/">Math</a>
-	    </li>
-          
-            <li class="toctree-l1 current">
-		
-    <a class="current" href="./">Time</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#time">Time</a></li>
-    
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Syntax/syntax/">Syntax</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Data_Types/data_types/">Data Types</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Builtin/builtin/">Core Functions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Math/math/">Math</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Time</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#delay">delay()</a>
         <ul>
-        
-            <li><a class="toctree-l3" href="#delay">delay()</a></li>
-        
-            <li><a class="toctree-l3" href="#delaymicroseconds">delayMicroseconds</a></li>
-        
-            <li><a class="toctree-l3" href="#millis">millis()</a></li>
-        
-            <li><a class="toctree-l3" href="#micros">micros()</a></li>
-        
+    <li class="toctree-l3"><a class="reference internal" href="#description">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#syntax">Syntax</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example">Example</a>
+    </li>
         </ul>
-    
-
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Interrupts/interrupts/">Interrupts</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Random/random/">Random</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Serial/Serial_Monitor/">Serial Monitor</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Libraries</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../Libraries/servo/">Servo</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Third Party Libraries</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../Libraries/dht/">DHT</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../Libraries/liquid_crystal/">LCD</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../Libraries/keypad/">Keypad</a>
-                </li>
-    </ul>
-	    </li>
-          
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#delaymicroseconds">delayMicroseconds</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_1">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#syntax_1">Syntax</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_1">Example</a>
+    </li>
         </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#millis">millis()</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_2">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#syntax_2">Syntax</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_2">Example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#micros">micros()</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#description_3">Description</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#syntax_3">Syntax</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example_3">Example</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Interrupts/interrupts/">Interrupts</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Random/random/">Random</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Serial/Serial_Monitor/">Serial Monitor</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Libraries</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Libraries/servo/">Servo</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Third Party Libraries</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Libraries/dht/">DHT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Libraries/liquid_crystal/">LCD</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Libraries/keypad/">Keypad</a>
+                  </li>
+              </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">Arduino Documentation</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Arduino Documentation</a>
+        
       </nav>
-
-      
       <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../..">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>Time</li>
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li>Time</li>
     <li class="wy-breadcrumbs-aside">
-      
     </li>
   </ul>
   <hr/>
 </div>
-          <div role="main">
-            <div class="section">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
               
                 <h1 id="time">Time</h1>
 <p>The functions below allow you to wait for a period of time or return the current time.</p>
@@ -186,12 +168,11 @@
 <li><strong>milliseconds</strong>: the number of milliseconds you wish to delay. There are 1,000 milliseconds in a second.</li>
 </ul>
 <h3 id="example">Example</h3>
-<pre><code class="c++">digitalWrite(13,HIGH);
+<pre><code class="language-c++">digitalWrite(13,HIGH);
 delay(1000); //Delay one second.
 digitalWrite(13,LOW);
 delay(1000); //Delay one second.
 </code></pre>
-
 <hr />
 <h2 id="delaymicroseconds">delayMicroseconds</h2>
 <h3 id="description_1">Description</h3>
@@ -202,12 +183,11 @@ delay(1000); //Delay one second.
 <li><strong>microseconds</strong>: the number of microseconds you wish to delay. There are 1,000,000 microseconds in a second.</li>
 </ul>
 <h3 id="example_1">Example</h3>
-<pre><code class="c++">digitalWrite(13,HIGH);
+<pre><code class="language-c++">digitalWrite(13,HIGH);
 delayMicroseconds(1000000); //Delay one second.
 digitalWrite(13,LOW);
 delayMicroseconds(500);     //Delay 500 microseconds
 </code></pre>
-
 <hr />
 <h2 id="millis">millis()</h2>
 <h3 id="description_2">Description</h3>
@@ -215,7 +195,7 @@ delayMicroseconds(500);     //Delay 500 microseconds
 <h3 id="syntax_2">Syntax</h3>
 <p>currentTime = millis();</p>
 <h3 id="example_2">Example</h3>
-<pre><code class="c++">unsigned long currentTime = millis();
+<pre><code class="language-c++">unsigned long currentTime = millis();
 
 void setup(){
 }
@@ -228,7 +208,6 @@ void loop() {
     }
 }
 </code></pre>
-
 <hr />
 <h2 id="micros">micros()</h2>
 <h3 id="description_3">Description</h3>
@@ -236,7 +215,7 @@ void loop() {
 <h3 id="syntax_3">Syntax</h3>
 <p>currentTime = micros();</p>
 <h3 id="example_3">Example</h3>
-<pre><code class="c++">unsigned long currentTime = micros();
+<pre><code class="language-c++">unsigned long currentTime = micros();
 
 void setup(){
 }
@@ -251,29 +230,21 @@ void loop() {
 </code></pre>
               
             </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../Math/math/" class="btn btn-neutral float-left" title="Math"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../../Interrupts/interrupts/" class="btn btn-neutral float-right" title="Interrupts">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../../Math/math/" class="btn btn-neutral" title="Math"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-    
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-      
+          
         </div>
       </div>
 
@@ -281,20 +252,26 @@ void loop() {
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="../../Math/math/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../../Interrupts/interrupts/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../Math/math/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../Interrupts/interrupts/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
     <script src="../../js/theme.js" defer></script>
       <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>

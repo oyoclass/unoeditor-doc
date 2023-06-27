@@ -1,193 +1,149 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Keypad - Arduino Documentation</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  <link href="../../css/doc.css" rel="stylesheet">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Keypad";
-    var mkdocs_page_input_path = "Libraries/keypad.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Keypad - Arduino Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../css/doc.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Keypad";
+        var mkdocs_page_input_path = "Libraries/keypad.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
-
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> Arduino Documentation</a>
-        <div role="search">
+          <a href="../.." class="icon icon-home"> Arduino Documentation
+        </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Syntax/syntax/">Syntax</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Data_Types/data_types/">Data Types</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Builtin/builtin/">Core Functions</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Math/math/">Math</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Time/time/">Time</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Interrupts/interrupts/">Interrupts</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Random/random/">Random</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../Serial/Serial_Monitor/">Serial Monitor</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Libraries</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../servo/">Servo</a>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
                 </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Third Party Libraries</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../dht/">DHT</a>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Syntax/syntax/">Syntax</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="../liquid_crystal/">LCD</a>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Data_Types/data_types/">Data Types</a>
                 </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Keypad</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#keypad">Keypad</a></li>
-    
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Builtin/builtin/">Core Functions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Math/math/">Math</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Time/time/">Time</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Interrupts/interrupts/">Interrupts</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Random/random/">Random</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../Serial/Serial_Monitor/">Serial Monitor</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Libraries</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../servo/">Servo</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Third Party Libraries</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../dht/">DHT</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../liquid_crystal/">LCD</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Keypad</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#2d-array">2D Array</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pinouts">Pinouts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#object">Object</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#methods">Methods</a>
         <ul>
-        
-            <li><a class="toctree-l4" href="#2d-array">2D Array</a></li>
-        
-            <li><a class="toctree-l4" href="#pinouts">Pinouts</a></li>
-        
-            <li><a class="toctree-l4" href="#object">Object</a></li>
-        
-            <li><a class="toctree-l4" href="#methods">Methods</a></li>
-        
+    <li class="toctree-l3"><a class="reference internal" href="#keypadobjgetkey">keypadObj.getKey()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#keypadobjwaitforkey">keypadObj.waitForKey()</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#credit">Credit</a>
+    </li>
         </ul>
-    
-
-    </ul>
-                </li>
-    </ul>
-	    </li>
-          
+    </li>
         </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">Arduino Documentation</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Arduino Documentation</a>
+        
       </nav>
-
-      
       <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../..">Docs</a> &raquo;</li>
-    
-      
-        
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
           <li>Third Party Libraries &raquo;</li>
-        
-      
-    
-    <li>Keypad</li>
+      <li>Keypad</li>
     <li class="wy-breadcrumbs-aside">
-      
     </li>
   </ul>
   <hr/>
 </div>
-          <div role="main">
-            <div class="section">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
               
                 <h1 id="keypad">Keypad</h1>
 <p>The keypad library makes using button matrix keypads easy to use with the Arduino. To properly read from a keypad, you have to scan through the rows and columns of the button matrix setting some as high or low outputs, and reading from others. To do so while trying to also detect other sensors and events is difficult. The keypad library does these processes for you, allowing you to read which key is pressed with a simple method, getKey().</p>
 <p>To use the keypad library, you first need to include it at the top of your code.</p>
-<pre><code class="c++">#include &lt;Keypad.h&gt;
+<pre><code class="language-c++">#include &lt;Keypad.h&gt;
 </code></pre>
-
 <h2 id="2d-array">2D Array</h2>
 <p>Now it's best to store the keys of the keypad in a 2D array. This will change depending on how your keypad is labled and how many keys it has. For example, your keypad may be a 4x4 or a 3x4 matrix.</p>
 <p>The example below is of a 4x4 keypad.</p>
-<pre><code class="c++">int numRows = 4;
+<pre><code class="language-c++">int numRows = 4;
 int numCols = 4;
 
 char keys[numRows][numCols] = {
@@ -197,51 +153,40 @@ char keys[numRows][numCols] = {
   {'*', '0', '#', 'D'}
 };
 </code></pre>
-
 <h2 id="pinouts">Pinouts</h2>
 <p>You also need to map the pinouts. To do this, we'll use two array, one for the rows and one for the columns. </p>
-<pre><code class="c++">byte rowPins[] = {9, 8, 7, 6}; 
+<pre><code class="language-c++">byte rowPins[] = {9, 8, 7, 6}; 
 byte colPins[] = {5, 4, 3, 2}; 
 </code></pre>
-
 <h2 id="object">Object</h2>
 <p>To create an LCD object, follow the line of code below. </p>
-<pre><code class="c++">Keypad keypadObj = Keypad(makeKeymap(keys), rowPins, colPins, rows, cols);
+<pre><code class="language-c++">Keypad keypadObj = Keypad(makeKeymap(keys), rowPins, colPins, rows, cols);
 </code></pre>
-
 <h2 id="methods">Methods</h2>
 <h3 id="keypadobjgetkey">keypadObj.getKey()</h3>
 <p>The .getKey() method returns the key pressed based on the 2D array you set up. This method returns a char. See below for an example of how to use the method.</p>
-<pre><code class="c++">char key = keypadObj.getKey();
+<pre><code class="language-c++">char key = keypadObj.getKey();
 </code></pre>
-
 <h3 id="keypadobjwaitforkey">keypadObj.waitForKey()</h3>
 <p>The .waitForKey() method waits until a key is pressed, and prevents all other code from running. The only exception is interrupt service routines, which will run when triggered, regarless of the .waitForKey() method.</p>
 <h4 id="credit">Credit</h4>
 <p><a href="https://playground.arduino.cc/Code/Keypad/">Library by Mark Stanley, Alexander Brevig</a></p>
               
             </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="../liquid_crystal/" class="btn btn-neutral" title="LCD"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../liquid_crystal/" class="btn btn-neutral float-left" title="LCD"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-    
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-      
+          
         </div>
       </div>
 
@@ -249,18 +194,24 @@ byte colPins[] = {5, 4, 3, 2};
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="../liquid_crystal/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-    </span>
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../liquid_crystal/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
 </div>
     <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
     <script src="../../js/theme.js" defer></script>
       <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>
